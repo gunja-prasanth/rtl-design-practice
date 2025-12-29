@@ -74,18 +74,55 @@ The work is organized day-wise to show structured learning and progressive compl
 
 ---
 
-## 📂 Repository Structure
+## 🔢 Day 3 – Adders (Half Adder & Full Adder)
 
-rtl-design-practice/
-├── combinational/
-│ ├── and_gate.v
-│ ├── or_gate.v
-│ ├── not_gate.v
-│ ├── nand_gate.v
-│ ├── nor_gate.v
-│ ├── xor_gate.v
-│ └── xnor_gate.v
-├── testbenches/
-│ ├── tb_basic_gates.v
-│ └── tb_universal_gates.v
-└── README.md
+### Implemented Modules
+- Half Adder
+- Full Adder
+
+### Verification
+- Separate testbenches for each adder  
+- Simulation tool: Vivado
+
+### Files
+**combinational/**
+- `half_adder.v`
+- `full_adder.v`
+
+**testbenches/**
+- `tb_half_adder.v`
+- `tb_full_adder.v`
+
+---
+
+## 🧮 Day 3 Truth Tables (Verified in Simulation)
+
+### Half Adder
+
+| A | B | Sum | Carry |
+|---|---|-----|-------|
+| 0 | 0 |  0  |   0   |
+| 0 | 1 |  1  |   0   |
+| 1 | 0 |  1  |   0   |
+| 1 | 1 |  0  |   1   |
+
+### Full Adder
+
+| A | B | Cin | Sum | Cout |
+|---|---|-----|-----|------|
+| 0 | 0 |  0  |  0  |  0   |
+| 0 | 0 |  1  |  1  |  0   |
+| 0 | 1 |  0  |  1  |  0   |
+| 0 | 1 |  1  |  0  |  1   |
+| 1 | 0 |  0  |  1  |  0   |
+| 1 | 0 |  1  |  0  |  1   |
+| 1 | 1 |  0  |  0  |  1   |
+| 1 | 1 |  1  |  1  |  1   |
+
+---
+
+## 🧠 Concept Notes
+- Half Adder adds two 1-bit inputs and produces Sum and Carry.
+- Full Adder adds three 1-bit inputs (A, B, Cin).
+- Full Adders are used as building blocks for multi-bit adders.
+- Carry propagation is a key factor in adder performance.
