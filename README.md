@@ -126,3 +126,41 @@ The work is organized day-wise to show structured learning and progressive compl
 - Full Adder adds three 1-bit inputs (A, B, Cin).
 - Full Adders are used as building blocks for multi-bit adders.
 - Carry propagation is a key factor in adder performance.
+
+## 🔹 Day-4: Subtractors (Combinational Circuits)
+
+This section covers the design and verification of subtractor circuits using Verilog HDL.  
+Subtractors are fundamental arithmetic blocks used in ALUs and processors.
+
+### 📁 RTL Modules
+Location: `combinational/subtractors/`
+
+- `half_subtractor.v`
+  - Performs subtraction of two 1-bit inputs (a − b)
+  - Outputs:
+    - Difference
+    - Borrow
+
+- `full_subtractor.v`
+  - Performs subtraction with borrow input (a − b − bin)
+  - Outputs:
+    - Difference
+    - Borrow out
+
+### 📁 Testbenches
+Location: `testbenches/subtractors/`
+
+- `tb_half_subtractor.v`
+- `tb_full_subtractor.v`
+
+Each testbench verifies all possible input combinations to ensure correct borrow and difference logic.
+
+### 🧠 Concepts Covered
+- Half Subtractor logic
+- Full Subtractor logic
+- Borrow generation
+- XOR-based difference calculation
+- Structured RTL and testbench organization
+
+✔️ All designs are simulated and verified using Vivado  
+✔️ Clean folder structure maintained for easy readability and review
