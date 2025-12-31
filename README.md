@@ -164,3 +164,23 @@ Each testbench verifies all possible input combinations to ensure correct borrow
 
 ✔️ All designs are simulated and verified using Vivado  
 ✔️ Clean folder structure maintained for easy readability and review
+
+## Day-5: Multiplexers
+
+This section contains RTL implementations of multiplexers using Verilog.
+
+### Implemented Modules
+- 2:1 Multiplexer
+- 4:1 Multiplexer (Hierarchical design using 2:1 multiplexers)
+
+### Folder Structure
+combinational/multiplexers/
+- mux_2to1.v
+- mux_4to1.v
+
+testbenches/multiplexers/
+- tb_mux_2to1.v
+- tb_mux_4to1.v
+
+### Key Concept
+A 4:1 multiplexer is implemented using three 2:1 multiplexers to demonstrate hierarchical and modular RTL design.
