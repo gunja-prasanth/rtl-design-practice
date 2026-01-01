@@ -184,3 +184,24 @@ testbenches/multiplexers/
 
 ### Key Concept
 A 4:1 multiplexer is implemented using three 2:1 multiplexers to demonstrate hierarchical and modular RTL design.
+
+### Day-6: Demultiplexers
+
+This section contains RTL implementations of demultiplexers using Verilog.
+
+### Implemented Modules
+1:2 Demultiplexer  
+1:4 Demultiplexer  
+
+### Folder Structure
+
+combinational/demultiplexers/  
+├── demux_1x2.v  
+├── demux_1x4.v  
+
+testbenches/demultiplexers/  
+├── tb_demux_1x2.v  
+├── tb_demux_1x4.v  
+
+### Key Concept  
+A demultiplexer routes a single input signal to one of multiple outputs based on select lines, ensuring that only one output is active at a time.
