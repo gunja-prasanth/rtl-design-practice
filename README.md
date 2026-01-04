@@ -234,3 +234,61 @@ All designs are written in Verilog HDL and verified using separate testbenches f
 - All modules verified using self-checking testbenches.
 ----
 
+# Day-8: Latches
+
+This module covers basic **level-sensitive storage elements (Latches)**.
+Latches are used to temporarily store data and are controlled by an enable signal.
+
+---
+
+## 🔹 SR Latch
+
+### Description
+- SR (Set-Reset) latch stores 1-bit data.
+- Inputs: **S (Set)** and **R (Reset)**.
+- When enabled:
+  - S = 1 → Output is set to 1
+  - R = 1 → Output is reset to 0
+  - S = R = 0 → Output holds previous value
+- S = R = 1 is an **invalid condition**.
+
+### Files
+- RTL: `sr_latch.v`
+- Testbench: `tb_sr_latch.v`
+
+---
+
+## 🔹 D Latch
+
+### Description
+- D latch removes the invalid condition of SR latch.
+- Input: **D (Data)** and **Enable**.
+- When Enable = 1 → Output follows D.
+- When Enable = 0 → Output holds previous value.
+- It is **level-sensitive**, not edge-triggered.
+
+### Files
+- RTL: `d_latch.v`
+- Testbench: `tb_d_latch.v`
+
+---
+
+
+
+## ✅ Status
+
+✔ SR Latch implemented and verified  
+✔ D Latch implemented and verified  
+✔ Separate RTL and testbench folders maintained  
+
+---
+
+## 🧠 Key Learning
+
+- Latches are **level-sensitive**
+- Flip-flops are **edge-triggered**
+- Latches are simple but risky in synchronous designs
+- Used carefully in low-power and gated designs
+
+
+
