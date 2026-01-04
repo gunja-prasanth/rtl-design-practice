@@ -290,5 +290,71 @@ Latches are used to temporarily store data and are controlled by an enable signa
 - Latches are simple but risky in synchronous designs
 - Used carefully in low-power and gated designs
 
+----
 
+# 🗓️ Day-9: Flip-Flops
 
+This module covers **edge-triggered storage elements (Flip-Flops)**, which are the backbone of synchronous digital systems.
+
+All flip-flops are implemented in **Verilog HDL** and verified using **separate testbenches**.
+
+---
+
+## 🔹 D Flip-Flop (D FF)
+
+### Description
+- Stores 1-bit data on the active clock edge
+- Input: **D (Data)**, **Clock**
+- On clock edge → Output captures D
+- Eliminates transparency issue seen in latches
+
+### Files
+- RTL: `d_ff.v`
+- Testbench: `tb_d_ff.v`
+
+---
+
+## 🔹 JK Flip-Flop (JK FF)
+
+### Description
+- Improvement over SR flip-flop
+- Inputs: **J**, **K**, **Clock**
+- Behavior:
+  - J = 0, K = 0 → No change
+  - J = 1, K = 0 → Set
+  - J = 0, K = 1 → Reset
+  - J = 1, K = 1 → Toggle
+
+### Files
+- RTL: `jk_ff.v`
+- Testbench: `tb_jk_ff.v`
+
+---
+
+## 🔹 T Flip-Flop (T FF)
+
+### Description
+- Derived from JK flip-flop
+- Input: **T (Toggle)**, **Clock**
+- T = 1 → Output toggles
+- T = 0 → Output holds state
+- Commonly used in counters
+
+### Files
+- RTL: `t_ff.v`
+- Testbench: `tb_t_ff.v`
+
+---
+
+## ✅ Status
+✔ D Flip-Flop implemented and verified  
+✔ JK Flip-Flop implemented and verified  
+✔ T Flip-Flop implemented and verified  
+✔ Separate RTL and testbench folders maintained  
+
+---
+
+## 🧠 Key Learnings
+- Flip-flops are **edge-triggered**
+- Used in registers, counters, and FSMs
+- More stable than latches in synchronous designs
