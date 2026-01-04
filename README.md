@@ -205,3 +205,32 @@ testbenches/demultiplexers/
 
 ### Key Concept  
 A demultiplexer routes a single input signal to one of multiple outputs based on select lines, ensuring that only one output is active at a time.
+----
+🗓️ Day-7: Encoders & Decoders (Combinational Logic)
+
+This task focuses on the design and verification of encoders and decoders, which are fundamental building blocks in combinational digital logic.
+All designs are written in Verilog HDL and verified using separate testbenches following proper RTL design practices.
+
+🔹 Modules Implemented
+1️⃣ 3:8 Decoder
+- Converts 3-bit binary input into 8 unique output lines
+- Only one output is HIGH for any valid input
+- Used in memory selection, instruction decoding, and address decoding
+
+2️⃣ 8:3 Encoder
+- Converts one-hot 8-bit input into a 3-bit binary output
+- Assumes only one input is active at a time
+- Used in data compression and digital systems
+
+3️⃣ 8:3 Priority Encoder
+- Handles multiple active inputs
+- Assigns priority to the highest-order input
+- Produces a valid encoded output even if multiple inputs are HIGH
+
+### Description
+- Implemented standard combinational encoder and decoder circuits using Verilog.
+- Priority encoder resolves multiple active inputs by assigning priority.
+- Separate folders maintained for RTL design and testbenches.
+- All modules verified using self-checking testbenches.
+----
+
