@@ -406,3 +406,100 @@ Registers are used to store data and update only on clock edges.
 
 ---
 
+# Day-11: Counters
+
+## Designs Implemented
+- Up Counter
+- Down Counter
+
+## Description
+This day focuses on synchronous counter designs implemented using
+clock-driven sequential logic.
+
+## Key Concepts
+- Clocked always blocks
+- Reset logic
+- Count increment and decrement
+- Synchronous design methodology
+
+## Related RTL Location
+- sequential/11_counters/
+
+## Commit Message
+Implement synchronous counters
+
+----
+
+# Day-12: Mod-N Counters
+
+## Designs Implemented
+- Mod-10 Counter
+- Mod-8 Counter
+
+## Description
+This day covers modulo-N counters that automatically reset after
+reaching a predefined terminal count.
+
+## Key Concepts
+- Counter rollover logic
+- Modulo arithmetic
+- Controlled reset conditions
+
+## Related RTL Location
+- sequential/12_mod_n_counters/
+
+## Commit Message
+Add mod-N counters
+
+----
+
+# Day-13: Shift Registers
+
+## Designs Implemented
+- SISO
+- SIPO
+- PISO
+- PIPO
+
+## Description
+This day focuses on various shift register architectures used for
+serial and parallel data transfer.
+
+## Key Concepts
+- Serial vs parallel data flow
+- Register-based storage
+- Data shifting mechanisms
+
+## Related RTL Location
+- sequential/13_shift_registers/
+
+## Commit Message
+Add shift register designs
+
+----
+
+# Day-14: Moore FSM
+
+## Design Implemented
+- Basic Moore Finite State Machine
+
+## Description
+This design demonstrates a Moore FSM where the output depends
+only on the current state and not directly on the input.
+
+## Key Concepts
+- State encoding
+- State register
+- Next-state logic
+- Moore vs Mealy FSM
+
+## Related RTL Location
+- fsm/13_moore_fsm/
+- testbenches/13_moore_fsm/
+
+## Commit Message
+Add Moore FSM example
+
+----
+
+
