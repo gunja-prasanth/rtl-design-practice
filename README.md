@@ -502,4 +502,42 @@ Add Moore FSM example
 
 ----
 
+# Day-15: Mealy FSM
+
+## Objective
+To design and verify a Mealy Finite State Machine (FSM) using pure Verilog.
+
+## Description
+This project implements a simple Mealy FSM that detects the input sequence **"10"**.
+The output depends on both the **current state** and the **current input**, which is the defining property of a Mealy machine.
+
+## FSM Behavior
+- Input  : x
+- Output : y
+- Output `y` becomes HIGH for one clock cycle when the sequence **1 followed by 0** is detected.
+
+## State Definition
+- S0 : Waiting for input '1'
+- S1 : Detected input '1'
+
+| Current State | Input (x) | Next State | Output (y) |
+|--------------|-----------|------------|------------|
+| S0 | 0 | S0 | 0 |
+| S0 | 1 | S1 | 0 |
+| S1 | 1 | S1 | 0 |
+| S1 | 0 | S0 | 1 |
+
+## Files
+- RTL Design: `fsm/14_mealy_fsm/mealy_fsm.v`
+- Testbench: `testbenches/14_mealy_fsm/tb_mealy_fsm.v`
+
+## Tools Used
+- Vivado 2018.2
+- Verilog HDL (no SystemVerilog features)
+
+## Notes
+- Designed using pure Verilog for maximum tool compatibility.
+- Verified using behavioral simulation.
+
+
 
