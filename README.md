@@ -539,5 +539,69 @@ The output depends on both the **current state** and the **current input**, whic
 - Designed using pure Verilog for maximum tool compatibility.
 - Verified using behavioral simulation.
 
+----
+
+🟩 Day-16: Sequence Detector (1011 – Overlapping)
+
+📌 Objective
+
+Design and verify a **1011 overlapping sequence detector** using a **Mealy Finite State Machine (FSM)**.
+
+The detector asserts output **z = 1** immediately when the input sequence **1011** is detected, and supports **overlapping sequences**.
+
+---
+
+🧠 Concept Overview
+
+- **FSM Type:** Mealy FSM  
+
+- **Why Mealy?**  
+  Output depends on **current state + current input**, allowing **faster detection**.
+
+- **Overlapping:**  
+  After detecting **1011**, the FSM continues from a valid intermediate state instead of resetting completely.
+
+---
+
+🔄 State Explanation
+
+| State | Meaning |
+|------|--------|
+| S0 | No match |
+| S1 | Detected `1` |
+| S2 | Detected `10` |
+| S3 | Detected `101` |
+
+### Overlapping Logic
+
+When in **S3** and input **x = 1**:
+
+- Sequence **1011** is detected → **z = 1**
+- FSM transitions to **S1**, allowing overlap
+
+---
+
+🧱 RTL Design
+
+- **File:** `seq_1011.v`  
+- **Language:** Verilog  
+- **Reset:** Asynchronous active-high  
+- **Output:** `z` asserted for **one clock cycle**
+
+---
+
+🧪 Testbench
+
+- **File:** `tb_seq_1011.v`
+
+- **Input stream tested:**
+
+- **Expected behavior:**
+- `z = 1` at the **4th** and **9th** bits
+- Confirms **overlapping detection**
+
+----
+
+
 
 
