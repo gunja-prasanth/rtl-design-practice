@@ -602,6 +602,58 @@ When in **S3** and input **x = 1**:
 
 ----
 
+# Day-17: Traffic Light Controller FSM 🚦
+
+## 📌 Objective
+Design and verify a simple Traffic Light Controller using a Finite State Machine (FSM).
+
+The controller cycles through:
+RED → GREEN → YELLOW → RED
+
+This design focuses on FSM fundamentals without timing counters.
+
+---
+
+## 🧠 Concept Overview
+
+- FSM Type: Moore FSM  
+- State changes occur on the positive edge of the clock  
+- Outputs depend only on the current state  
+
+---
+
+## 🧩 State Description
+
+| State  | Red | Yellow | Green |
+|------|-----|--------|-------|
+| RED    | 1 | 0 | 0 |
+| GREEN  | 0 | 0 | 1 |
+| YELLOW | 0 | 1 | 0 |
+
+---
+
+## 🏗️ RTL Design
+
+- File: `traffic_light_fsm.v`
+- States encoded using parameters
+- Separate always blocks for:
+  - State register
+  - Next-state logic
+  - Output logic
+
+---
+
+## 🧪 Verification
+
+- Testbench: `tb_traffic_light_fsm.v`
+- Clock-driven simulation
+- Reset initializes FSM to RED
+- Verified state sequence in waveform
+
+----
+
+
+
 
 
 
