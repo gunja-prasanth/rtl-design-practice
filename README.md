@@ -652,6 +652,37 @@ This design focuses on FSM fundamentals without timing counters.
 
 ----
 
+# Day-17: Vending Machine FSM (RTL)
+
+## Objective
+Design a coin-based vending machine using a Finite State Machine (FSM).
+
+## FSM Type
+Moore FSM
+
+## Specifications
+- Accepted coins: ₹5 and ₹10
+- Item price: ₹15
+- Dispense signal asserted when total reaches ₹15
+- Machine resets automatically after dispensing
+
+## State Description
+- S0  : ₹0 collected
+- S5  : ₹5 collected
+- S10 : ₹10 collected
+
+## Inputs
+- clk     : System clock
+- reset   : Asynchronous reset
+- coin_5  : ₹5 coin input
+- coin_10 : ₹10 coin input
+
+## Output
+- dispense : Goes HIGH for one clock cycle when item is dispensed
+
+## RTL File
+- vending_machine_fsm.v
+
 
 
 
