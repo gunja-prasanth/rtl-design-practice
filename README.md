@@ -652,7 +652,7 @@ This design focuses on FSM fundamentals without timing counters.
 
 ----
 
-# Day-17: Vending Machine FSM (RTL)
+# Day-18: Vending Machine FSM (RTL)
 
 ## Objective
 Design a coin-based vending machine using a Finite State Machine (FSM).
@@ -685,7 +685,7 @@ Moore FSM
 
 ----
 
-# Day-18: FSM Optimization
+# Day-19: FSM Optimization
 
 ## Objective
 The objective of this task is to optimize a Finite State Machine (FSM) by
