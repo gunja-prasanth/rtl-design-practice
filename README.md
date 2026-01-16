@@ -683,6 +683,83 @@ Moore FSM
 ## RTL File
 - vending_machine_fsm.v
 
+----
+
+# Day-18: FSM Optimization
+
+## Objective
+The objective of this task is to optimize a Finite State Machine (FSM) by
+reducing unnecessary states and improving code readability, while preserving
+the original functional behavior.
+
+This task focuses on writing clean, efficient, and maintainable RTL code,
+which is critical for real-world hardware design and interviews.
+
+---
+
+## What is FSM Optimization?
+FSM optimization is the process of:
+- Removing redundant or unreachable states
+- Merging equivalent states
+- Simplifying state transitions
+- Improving readability without changing functionality
+
+An optimized FSM uses fewer hardware resources and is easier to debug and
+maintain.
+
+---
+
+## Optimization Performed
+- Reduced the total number of states to the minimum required
+- Eliminated redundant intermediate states
+- Simplified next-state transition logic
+- Used clear and consistent state encoding
+- Maintained identical external behavior after optimization
+
+---
+
+## FSM Type
+Moore FSM  
+(Output depends only on the current state)
+
+---
+
+## Design Overview
+- The FSM transitions between states based on input `x`
+- Output `y` is asserted only in the valid active state
+- Reset brings the FSM back to the initial state
+- All transitions occur synchronously with the clock
+
+---
+
+## Inputs
+- `clk`   : System clock
+- `reset` : Asynchronous reset
+- `x`     : Input signal controlling state transitions
+
+## Output
+- `y` : Output signal asserted in the active state
+
+---
+
+## Files
+- `fsm_optimized.v` : Optimized FSM RTL implementation
+
+---
+
+## Key Learning Outcomes
+- Understanding state reduction techniques
+- Writing clean and synthesizable FSM code
+- Designing efficient state machines
+- Improving RTL readability for reviews and interviews
+
+---
+
+## Notes
+This optimized FSM demonstrates that good design is not about adding more
+states or complexity, but about achieving correct behavior with minimal and
+clean logic.
+
 
 
 
