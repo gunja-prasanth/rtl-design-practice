@@ -842,6 +842,90 @@ Confirms correct RTL structure and logic connectivity.
 
 ----
 
+# 🟩 Day-20: 8-bit ALU Design
+
+## 📌 Objective
+Design, implement, and verify an **8-bit Arithmetic Logic Unit (ALU)** using Verilog HDL.  
+The ALU supports basic arithmetic and logical operations and is fully verified using simulation.
+
+---
+
+## 🧠 Concept Overview
+
+### What is an ALU?
+An **Arithmetic Logic Unit (ALU)** is a core digital block used in processors to perform:
+- Arithmetic operations
+- Logical operations
+
+This 8-bit ALU is a **combinational circuit**, meaning the output depends only on the current inputs.
+
+---
+
+## 🔢 Supported Operations
+
+| Select (sel) | Operation | Description |
+|-------------|----------|-------------|
+| `00` | ADD | `a + b` |
+| `01` | SUB | `a - b` |
+| `10` | AND | Bitwise AND |
+| `11` | OR  | Bitwise OR |
+
+---
+
+## 🧱 RTL Design
+
+- **File**: `alu_8bit.v`
+- **Language**: Verilog HDL
+- **Inputs**:
+  - `a` : 8-bit operand
+  - `b` : 8-bit operand
+  - `sel` : 2-bit operation selector
+- **Output**:
+  - `y` : 8-bit ALU result
+- **Design Type**: Purely combinational (`always @(*)`)
+
+---
+
+## 🧪 Testbench
+
+- **File**: `tb_alu_8bit.v`
+- Multiple test cases applied
+- Verifies:
+  - Addition
+  - Subtraction
+  - AND
+  - OR
+- Different input values are tested to ensure correctness
+
+---
+
+## 📸 Simulation & Elaboration Proof
+
+### ✅ Simulation
+Waveforms confirm correct ALU behavior for all operations.
+
+📁 `images/alu_8bit_simulation.png`
+
+### ✅ Elaboration
+RTL schematic confirms proper combinational logic implementation.
+
+📁 `images/alu_8bit_elaboration.png`
+
+---
+
+## ✅ Outcome
+- Successfully designed an **8-bit ALU**
+- Verified all operations using simulation
+- Maintained clean, professional GitHub structure
+- Added visual proof for validation
+
+---
+
+🔒 **Day-20 Complete**
+
+----
+
+
 
 
 
