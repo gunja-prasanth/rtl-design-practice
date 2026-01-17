@@ -760,6 +760,89 @@ This optimized FSM demonstrates that good design is not about adding more
 states or complexity, but about achieving correct behavior with minimal and
 clean logic.
 
+----
+
+# 🟩 Day-19: 4-bit ALU Design
+
+## 📌 Objective
+
+Design and verify a **4-bit Arithmetic Logic Unit (ALU)** using Verilog RTL.
+
+The ALU supports basic arithmetic and logical operations and is fully verified using a testbench with simulation proof.
+
+---
+
+## 🧠 Concept Overview
+
+An **ALU (Arithmetic Logic Unit)** is a core block of any processor.  
+It performs arithmetic and logical operations on binary data.
+
+### Supported Operations
+
+| Select (sel) | Operation |
+|-------------|----------|
+| 00          | Addition (A + B) |
+| 01          | Subtraction (A - B) |
+| 10          | Bitwise AND |
+| 11          | Bitwise OR |
+
+- Width: **4-bit**
+- Design Type: **Combinational**
+- Output updates immediately based on inputs and select line
+
+---
+
+## 🧱 RTL Design
+
+- **File:** `alu_4bit.v`
+- **Language:** Verilog HDL
+- **Inputs:**  
+  - `A[3:0]`, `B[3:0]`  
+  - `sel[1:0]`
+- **Output:**  
+  - `Y[3:0]`
+
+The ALU uses a `case` statement to select the operation based on `sel`.
+
+---
+
+## 🧪 Testbench
+
+- **File:** `tb_alu_4bit.v`
+- All ALU operations are tested with different input combinations.
+- Ensures correct functionality for:
+  - Addition
+  - Subtraction
+  - AND
+  - OR
+
+---
+
+## 📸 Verification Proof
+
+### ✅ Simulation Result
+Shows correct ALU output for all select operations.
+
+![ALU Simulation](images/alu_4bit_simulation.png)
+
+### ✅ Elaborated Design
+Confirms correct RTL structure and logic connectivity.
+
+![ALU Elaborated](images/alu_4bit_elaborated.png)
+
+---
+
+## 🧠 Key Learnings
+
+- How to design a combinational ALU in RTL
+- Using `case` statements for operation selection
+- Writing a structured testbench
+- Verifying design using waveform and elaboration
+- Maintaining clean GitHub project structure
+
+----
+
+
 
 
 
