@@ -925,6 +925,101 @@ RTL schematic confirms proper combinational logic implementation.
 
 ----
 
+# 🟩 Day-21: 4-bit Magnitude Comparator
+
+## 📌 Objective
+Design and verify a **4-bit magnitude comparator** using Verilog HDL.  
+The comparator compares two 4-bit numbers and indicates whether:
+
+- A > B  
+- A == B  
+- A < B  
+
+Only **one output is asserted at a time**, ensuring correct magnitude comparison.
+
+---
+
+## 🧠 Concept Overview
+
+A **magnitude comparator** is a fundamental combinational circuit used in:
+- CPUs
+- ALUs
+- Control logic
+- Digital decision-making circuits
+
+This design compares two unsigned 4-bit inputs using relational operators.
+
+---
+
+## 🔢 Inputs & Outputs
+
+### Inputs
+- `a` : 4-bit input number  
+- `b` : 4-bit input number  
+
+### Outputs
+- `a_gt_b` : High when `a > b`  
+- `a_eq_b` : High when `a == b`  
+- `a_lt_b` : High when `a < b`  
+
+✔ Outputs are **mutually exclusive**
+
+---
+
+## 🧱 RTL Design
+
+- **File**: `comparator_4bit.v`
+- **Language**: Verilog HDL
+- **Design Type**: Combinational logic
+- **Method**:
+  - Uses `if–else` comparison
+  - Fully synthesizable
+  - Simple and readable logic
+
+---
+
+## 🧪 Testbench
+
+- **File**: `tb_comparator_4bit.v`
+- Test cases include:
+  - A > B
+  - A == B
+  - A < B
+  - Boundary conditions (0 and maximum values)
+- Confirms:
+  - Correct output assertion
+  - Only one comparison output is HIGH at a time
+
+---
+
+## 📸 Simulation & Elaboration Proof
+
+### ✅ Simulation
+Waveforms confirm correct comparator behavior for all test cases.
+
+📁 `images/comparator_4bit_simulation.png`
+
+### ✅ Elaboration
+Elaborated RTL schematic verifies clean combinational implementation.
+
+📁 `images/comparator_4bit_elaboration.png`
+
+---
+
+## ✅ Outcome
+- Successfully designed a **4-bit magnitude comparator**
+- Verified using simulation
+- Clean, organized GitHub structure
+- Includes visual proof for validation
+- Interview- and professor-ready design
+
+---
+
+🔒 **Day-21 Complete**
+
+
+
+
 
 
 
