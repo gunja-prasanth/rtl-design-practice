@@ -1017,6 +1017,103 @@ Elaborated RTL schematic verifies clean combinational implementation.
 
 🔒 **Day-21 Complete**
 
+----
+
+# 🟩 Day-22: 8-bit Magnitude Comparator
+
+## 📌 Objective
+Design and verify an **8-bit magnitude comparator** using Verilog HDL.
+
+The comparator evaluates two 8-bit inputs and indicates whether:
+- **A > B**
+- **A == B**
+- **A < B**
+
+At any time, **only one output is asserted**, ensuring correct and unambiguous comparison.
+
+---
+
+## 🧠 Concept Overview
+
+A **magnitude comparator** is a fundamental combinational circuit widely used in:
+- ALUs
+- CPUs
+- Control logic
+- Digital decision-making systems
+
+This design compares two **unsigned 8-bit numbers** using relational operators and produces mutually exclusive outputs.
+
+---
+
+## 🔢 Inputs & Outputs
+
+### Inputs
+- `a` : 8-bit input operand  
+- `b` : 8-bit input operand  
+
+### Outputs
+- `a_gt_b` : High when `a > b`  
+- `a_eq_b` : High when `a == b`  
+- `a_lt_b` : High when `a < b`  
+
+✔ Exactly **one output is HIGH** for any input combination.
+
+---
+
+## 🧱 RTL Design
+
+- **File**: `comparator_8bit.v`
+- **Language**: Verilog HDL
+- **Design Type**: Combinational logic
+- **Implementation Details**:
+  - Uses `if–else` conditional comparisons
+  - Fully synthesizable
+  - Clear and readable RTL structure
+
+---
+
+## 🧪 Testbench
+
+- **File**: `tb_comparator_8bit.v`
+- Test cases cover:
+  - A > B
+  - A == B
+  - A < B
+  - Boundary cases (0 and maximum 8-bit values)
+- Confirms:
+  - Correct comparator functionality
+  - Mutual exclusivity of outputs
+
+---
+
+## 📸 Simulation & Elaboration Proof
+
+### ✅ Simulation
+Waveform results validate correct comparator behavior for all test cases.
+
+📁 `images/comparator_8bit_simulation.png`
+
+### ✅ Elaboration
+Elaborated RTL schematic confirms a clean combinational implementation.
+
+📁 `images/comparator_8bit_elaboration.png`
+
+---
+
+## ✅ Outcome
+- Successfully designed an **8-bit magnitude comparator**
+- Verified functionality using simulation
+- Maintained clean, professional GitHub structure
+- Added visual proof for validation
+- Interview- and professor-ready implementation
+
+---
+
+🔒 **Day-22 Complete**
+
+
+
+
 
 
 
