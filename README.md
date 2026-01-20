@@ -1111,6 +1111,94 @@ Elaborated RTL schematic confirms a clean combinational implementation.
 
 🔒 **Day-22 Complete**
 
+----
+
+🟩 Day-23: Parity Generator & Checker
+
+📌 Objective  
+Design and verify Even and Odd Parity Generator and Parity Checker circuits using Verilog HDL.  
+This task focuses on understanding error detection basics used in digital communication and processors.
+
+---
+
+🧠 Concept Overview  
+
+🔹 What is Parity?  
+Parity is a simple error-detection technique where an extra bit is added to data to make the total number of 1s either:
+- Even (Even Parity)
+- Odd (Odd Parity)
+
+🔹 Why Parity is Important?  
+- Used in memory systems  
+- Serial communication  
+- Data integrity checking  
+- Fundamental concept for ECC and reliability systems  
+
+---
+
+🔢 Types Implemented  
+
+1️⃣ Even Parity  
+- Parity bit is set so total number of 1s is **even**
+
+2️⃣ Odd Parity  
+- Parity bit is set so total number of 1s is **odd**
+
+---
+
+🧱 RTL Design  
+
+📁 Folder: `combinational/24_parity_generator_checker/`
+
+Implemented Modules:
+- `parity_generator.v`
+- `parity_checker.v`
+
+Design Details:
+- Pure combinational logic
+- Parameterized for data width (if applicable)
+- Clean, synthesizable Verilog
+- No latches, no clock dependency
+
+---
+
+🧪 Testbench  
+
+📁 Folder: `testbenches/24_parity_generator_checker/`
+
+Testbenches:
+- `tb_parity_generator.v`
+- `tb_parity_checker.v`
+
+Test Coverage:
+- Random data patterns
+- Both even and odd parity cases
+- Error detection verified
+- Self-checking waveform observation
+
+---
+
+📊 Verification Proof  
+
+📁 Folder: `combinational/24_parity_generator_checker/images/`
+
+Included Proofs:
+- ✅ Simulation waveform screenshots  
+- ✅ Elaborated design screenshots  
+
+These confirm correct functional behavior and proper RTL structure.
+
+---
+
+✅ Results  
+
+- Even parity generation works correctly  
+- Odd parity generation works correctly  
+- Parity checker accurately detects errors  
+- Design verified through simulation and elaboration  
+
+---
+
 
 
 
