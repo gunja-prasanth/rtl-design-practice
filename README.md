@@ -1197,7 +1197,87 @@ These confirm correct functional behavior and proper RTL structure.
 - Parity checker accurately detects errors  
 - Design verified through simulation and elaboration  
 
+----
+
+# 🟩 Day-24: Barrel Shifter (Logical)
+
+## 📌 Objective
+Design and implement an **8-bit Barrel Shifter** using Verilog HDL that supports:
+- **Logical Left Shift**
+- **Logical Right Shift**
+
+The design performs variable shifts in **a single cycle** using combinational logic.
+
 ---
+
+## 🧠 Concept Overview
+
+### What is a Barrel Shifter?
+A **barrel shifter** is a combinational circuit that shifts data by an arbitrary number of positions in **one operation**, unlike serial shifters that shift one bit per cycle.
+
+Barrel shifters are widely used in:
+- ALUs
+- CPUs
+- DSPs
+- Data path designs
+
+---
+
+## 🔢 Supported Operations
+
+| Direction (`dir`) | Operation |
+|------------------|-----------|
+| `0` | Logical Left Shift |
+| `1` | Logical Right Shift |
+
+- Shift amount is controlled by a **3-bit shift value**
+- Vacated bit positions are filled with **zeros** (logical shift)
+
+---
+
+## 🧱 RTL Design
+
+- **File**: `barrel_shifter.v`
+- **Language**: Verilog HDL
+- **Design Type**: Combinational
+- **Inputs**:
+  - `data_in [7:0]` : Input data
+  - `shift_amt [2:0]` : Number of positions to shift
+  - `dir` : Shift direction control
+- **Output**:
+  - `data_out [7:0]` : Shifted result
+
+### Implementation Details
+- Uses Verilog shift operators (`<<`, `>>`)
+- Fully synthesizable
+- No clock or reset required
+- Clean and readable RTL
+
+---
+
+## 🧪 Testbench
+
+- **File**: `tb_barrel_shifter.v`
+- Test cases include:
+  - Multiple left shifts
+  - Multiple right shifts
+  - Different shift amounts
+- Verifies correct shifting behavior for all combinations
+
+---
+
+## ✅ Outcome
+- Successfully implemented an **8-bit logical barrel shifter**
+- Verified correct left and right shift behavior
+- Maintained clean and modular GitHub organization
+- Design is synthesis- and interview-ready
+
+
+
+🔒 **Day-24 Complete**
+
+----
+
 
 
 
