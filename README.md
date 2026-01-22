@@ -1278,6 +1278,87 @@ Barrel shifters are widely used in:
 
 ----
 
+# 🟩 Day-25: Clock Divider (Frequency Divider)
+
+## 📌 Objective
+Design and verify a **clock divider (frequency divider)** using Verilog HDL.
+
+The goal is to generate a **lower-frequency clock** from a higher-frequency input clock using **sequential logic**.
+
+---
+
+## 🧠 Concept Overview
+
+### What is a Clock Divider?
+A **clock divider** is a digital circuit that reduces the frequency of an input clock by a fixed factor.
+
+Clock dividers are commonly used in:
+- Digital systems for timing control
+- Processors and microcontrollers
+- Communication interfaces
+- Power optimization and clock management
+
+---
+
+## 🔢 Design Description
+
+- The divider uses a **counter-based approach**
+- The output clock toggles after a fixed number of input clock cycles
+- Reset initializes the divider to a known state
+
+This implementation divides the input clock by **2 × N**, where `N` is configurable.
+
+---
+
+## 🧱 RTL Design
+
+- **File**: `clock_divider.v`
+- **Language**: Verilog HDL
+- **Design Type**: Sequential logic
+- **Inputs**:
+  - `clk_in` : Input clock
+  - `rst` : Asynchronous active-high reset
+- **Output**:
+  - `clk_out` : Divided clock output
+- **Key Features**:
+  - Parameterized division factor
+  - Counter-based implementation
+  - Fully synthesizable
+
+---
+
+## 🧪 Testbench
+
+- **File**: `tb_clock_divider.v`
+- Generates a periodic input clock
+- Applies reset
+- Verifies that:
+  - Output clock frequency is lower than input clock
+  - Output toggles correctly after the expected number of cycles
+
+---
+
+
+## ✅ Outcome
+- Successfully implemented a **clock divider**
+- Verified frequency division through simulation
+- Reinforced understanding of:
+  - Counters
+  - Sequential logic
+  - Clock management
+- Maintained clean, professional GitHub structure
+
+---
+
+## 🎯 Interview One-Liner
+> “A clock divider reduces the frequency of an input clock using counter-based sequential logic and is widely used for timing control in digital systems.”
+
+---
+
+🔒 **Day-25 Complete**
+
+----
+
 
 
 
