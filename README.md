@@ -1359,6 +1359,96 @@ This implementation divides the input clock by **2 × N**, where `N` is configur
 
 ----
 
+# 🟩 Day-26: FIFO (Basic)
+
+## 📌 Objective
+Design and verify a **basic synchronous FIFO (First-In First-Out)** buffer using Verilog HDL.
+
+The FIFO stores data in the order it is written and outputs data in the same order it was received.
+
+---
+
+## 🧠 Concept Overview
+
+### What is a FIFO?
+A **FIFO (First-In First-Out)** is a memory structure where:
+- The **first data written** is the **first data read**
+- Data ordering is preserved
+
+FIFOs are widely used in:
+- Data buffering
+- Communication interfaces
+- Producer–consumer systems
+- Pipeline and data-flow designs
+
+---
+
+## 🔢 Design Description
+
+- **FIFO Type**: Synchronous FIFO  
+- **Depth**: Configurable (default 8 entries)  
+- **Data Width**: Configurable (default 8 bits)
+
+The design uses:
+- Write pointer
+- Read pointer
+- Counter to track stored elements
+
+---
+
+## 🧱 RTL Design
+
+- **File**: `fifo_basic.v`
+- **Language**: Verilog HDL
+- **Design Type**: Sequential logic
+- **Inputs**:
+  - `clk` : Clock input
+  - `rst` : Asynchronous active-high reset
+  - `wr_en` : Write enable
+  - `rd_en` : Read enable
+  - `din` : Input data
+- **Outputs**:
+  - `dout` : Output data
+  - `full` : FIFO full flag
+  - `empty` : FIFO empty flag
+
+---
+
+## 🧪 Testbench
+
+- **File**: `tb_fifo_basic.v`
+- Testbench operations:
+  - Write multiple data values into FIFO
+  - Read data out of FIFO
+  - Verify FIFO order is preserved
+  - Check `full` and `empty` flag behavior
+
+---
+
+## PROOFS ARE AVAILABLE 
+
+---
+
+## ✅ Outcome
+- Successfully implemented a **basic FIFO**
+- Verified correct FIFO behavior through simulation
+- Strengthened understanding of:
+  - Read/write pointers
+  - Buffering mechanisms
+  - Sequential logic design
+- Maintained clean and professional GitHub organization
+
+---
+
+## 🎯 Interview One-Liner
+> “A FIFO ensures first-in-first-out data ordering using separate read and write pointers and is commonly used for buffering and flow control.”
+
+---
+
+🔒 **Day-26 Complete**
+
+----
+
 
 
 
