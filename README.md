@@ -1449,6 +1449,98 @@ The design uses:
 
 ----
 
+🟩 Day-27: FIFO (Advanced / Robust FIFO)
+
+━━━━━━━━━━━━━━━━━━━━━━━
+📌 OBJECTIVE
+━━━━━━━━━━━━━━━━━━━━━━━
+Design and verify an **Advanced / Robust FIFO** using Verilog HDL.
+
+This FIFO goes beyond a basic implementation by adding **parameterization, safety, and status flags**, making it suitable for **real-world designs and interviews**.
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🧠 WHY THIS FIFO MATTERS
+━━━━━━━━━━━━━━━━━━━━━━━
+✔ Interviewers LOVE FIFO questions  
+✔ Shows design maturity beyond basics  
+✔ Demonstrates safe pointer & control logic  
+✔ Used in processors, SoCs, buses, and pipelines  
+
+This FIFO is **industry-aligned**, not just academic.
+
+━━━━━━━━━━━━━━━━━━━━━━━
+✨ FEATURES ADDED (LEVEL-UP)
+━━━━━━━━━━━━━━━━━━━━━━━
+✅ Parameterized **DATA WIDTH**  
+✅ Parameterized **DEPTH**  
+✅ `full` flag  
+✅ `empty` flag  
+✅ `almost_full` flag  
+✅ `almost_empty` flag  
+✅ Safe read/write pointer logic  
+✅ Simultaneous read & write support  
+✅ Synchronous reset  
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🧱 RTL DESIGN
+━━━━━━━━━━━━━━━━━━━━━━━
+📄 File: `fifo_advanced.v`  
+🛠 Language: Verilog HDL  
+🧩 Design Type: Sequential (Single Clock FIFO)
+
+🔹 Core Components:
+- Memory array
+- Write pointer
+- Read pointer
+- Element count register
+
+🔹 Flag Generation:
+- `full`         → FIFO completely filled  
+- `empty`        → FIFO empty  
+- `almost_full`  → Near full threshold  
+- `almost_empty` → Near empty threshold  
+
+All flags are **derived safely from the count value**.
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🧪 TESTBENCH
+━━━━━━━━━━━━━━━━━━━━━━━
+📄 File: `tb_fifo_advanced.v`
+
+✔ Writes multiple values into FIFO  
+✔ Reads values out in correct order  
+✔ Verifies:
+- FIFO ordering (First-In First-Out)
+- Correct assertion of `almost_full`
+- Correct assertion of `almost_empty`
+- No overflow or underflow  
+
+━━━━━━━━━━━━━━━━━━━━━━━
+📸 VERIFICATION STATUS
+━━━━━━━━━━━━━━━━━━━━━━━
+✅ Simulation waveform verified  
+✅ FIFO order preserved  
+✅ Flags behave as expected  
+✅ Elaborated design confirms clean RTL structure  
+
+━━━━━━━━━━━━━━━━━━━━━━━
+✅ OUTCOME
+━━━━━━━━━━━━━━━━━━━━━━━
+✔ Implemented an **advanced, parameterized FIFO**  
+✔ Verified safe data flow and control logic  
+✔ Demonstrated real RTL design practices  
+✔ Achieved interview-ready FIFO implementation  
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🎯 INTERVIEW ONE-LINER
+━━━━━━━━━━━━━━━━━━━━━━━
+“A FIFO buffers data using read/write pointers and count-based control logic, ensuring safe and ordered data transfer.”
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🔒 DAY-27 COMPLETE
+━━━━━━━━━━━━━━━━━━━━━━━
+
+
 
 
 
