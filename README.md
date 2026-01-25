@@ -1540,6 +1540,88 @@ All flags are **derived safely from the count value**.
 🔒 DAY-27 COMPLETE
 ━━━━━━━━━━━━━━━━━━━━━━━
 
+🟩 Day-28: Arbiter (Round-Robin)
+
+━━━━━━━━━━━━━━━━━━━━━━━
+📌 OBJECTIVE
+━━━━━━━━━━━━━━━━━━━━━━━
+Design and verify a **Round-Robin Arbiter** using Verilog HDL.
+
+The arbiter selects **one request at a time** from multiple requesters while ensuring **fairness** and preventing starvation.
+
+This block is a **core interconnect component** used in buses, NoCs, DMA engines, and SoC fabrics.
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🧠 WHY THIS MATTERS
+━━━━━━━━━━━━━━━━━━━━━━━
+✔ Widely used in SoC interconnects  
+✔ Frequently asked in RTL interviews  
+✔ Tests both combinational & sequential logic  
+✔ Demonstrates fairness handling  
+
+Understanding arbiters is essential for **system-level RTL design**.
+
+━━━━━━━━━━━━━━━━━━━━━━━
+✨ FEATURES IMPLEMENTED
+━━━━━━━━━━━━━━━━━━━━━━━
+✅ 4 request inputs  
+✅ One-hot grant output  
+✅ Round-robin fairness policy  
+✅ No starvation  
+✅ Sequential memory of last grant  
+✅ Synthesizable & tool-safe RTL  
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🧱 RTL DESIGN
+━━━━━━━━━━━━━━━━━━━━━━━
+📄 File: `arbiter_rr.v`  
+🛠 Language: Verilog HDL  
+🧩 Design Type: Sequential + Combinational
+
+🔹 Key Components:
+- `last_grant` register to track previous winner  
+- Rotating priority logic using case statement  
+- One-hot grant generation  
+
+The arbiter checks requests **starting after the last granted requester**, ensuring fair rotation.
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🧪 TESTBENCH
+━━━━━━━━━━━━━━━━━━━━━━━
+📄 File: `tb_arbiter_rr.v`
+
+✔ All requesters active (fair rotation)  
+✔ Partial request patterns  
+✔ Single requester scenario  
+✔ No-request idle condition  
+
+Waveforms confirm **correct grant rotation** and **one-hot behavior**.
+
+━━━━━━━━━━━━━━━━━━━━━━━
+📸 VERIFICATION STATUS
+━━━━━━━━━━━━━━━━━━━━━━━
+✅ Simulation verified  
+✅ One-hot grant ensured  
+✅ Fairness observed  
+✅ Elaborated design confirms clean RTL  
+
+━━━━━━━━━━━━━━━━━━━━━━━
+✅ OUTCOME
+━━━━━━━━━━━━━━━━━━━━━━━
+✔ Implemented a **round-robin arbiter**  
+✔ Ensured fairness among requesters  
+✔ Demonstrated real SoC control logic  
+✔ Achieved interview-ready RTL quality  
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🎯 INTERVIEW ONE-LINER
+━━━━━━━━━━━━━━━━━━━━━━━
+“A round-robin arbiter rotates priority after each grant to ensure fairness and prevent starvation.”
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🔒 DAY-28 COMPLETE
+━━━━━━━━━━━━━━━━━━━━━━━
+
 
 
 
