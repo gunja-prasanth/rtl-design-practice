@@ -1622,6 +1622,93 @@ Waveforms confirm **correct grant rotation** and **one-hot behavior**.
 🔒 DAY-28 COMPLETE
 ━━━━━━━━━━━━━━━━━━━━━━━
 
+----
+
+🟩 Day-29: Register File (Multi-Port)
+
+━━━━━━━━━━━━━━━━━━━━━━━
+📌 OBJECTIVE
+━━━━━━━━━━━━━━━━━━━━━━━
+Design and verify a **multi-port register file** using Verilog HDL.
+
+The register file supports:
+- **2 read ports**
+- **1 write port**
+- **Synchronous write**
+- **Combinational read**
+
+This block directly maps to **CPU datapaths** and is a **must-have RTL core**.
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🧠 WHY THIS MATTERS
+━━━━━━━━━━━━━━━━━━━━━━━
+✔ Core building block of processors  
+✔ Frequently asked in **placements & GATE**  
+✔ Tests sequential + combinational logic  
+✔ Demonstrates multi-port memory handling  
+
+Every CPU instruction relies on a register file.
+
+━━━━━━━━━━━━━━━━━━━━━━━
+✨ FEATURES IMPLEMENTED
+━━━━━━━━━━━━━━━━━━━━━━━
+✅ 8 registers × 8-bit width  
+✅ Two independent read ports  
+✅ One synchronous write port  
+✅ Write enable control  
+✅ Reset initializes all registers  
+✅ Clean, synthesizable RTL  
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🧱 RTL DESIGN
+━━━━━━━━━━━━━━━━━━━━━━━
+📄 File: `regfile_8x8.v`  
+🛠 Language: Verilog HDL  
+🧩 Design Type: Sequential write + Combinational read  
+
+🔹 Ports:
+- `clk` → clock  
+- `rst` → reset  
+- `we` → write enable  
+- `waddr`, `wdata` → write address & data  
+- `raddr1`, `raddr2` → read addresses  
+- `rdata1`, `rdata2` → read outputs  
+
+🔹 Design Characteristics:
+- Write occurs on **clock edge**
+- Reads reflect data **immediately**
+- Supports parallel operand access
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🧪 TESTBENCH
+━━━━━━━━━━━━━━━━━━━━━━━
+📄 File: `tb_regfile_8x8.v`
+
+✔ Writes data to multiple registers  
+✔ Reads from two registers simultaneously  
+✔ Verifies correct write timing  
+✔ Confirms combinational read behavior  
+
+Waveforms validate proper register file operation.
+
+━━━━━━━━━━━━━━━━━━━━━━━
+✅ OUTCOME
+━━━━━━━━━━━━━━━━━━━━━━━
+✔ Implemented a **multi-port register file**  
+✔ Verified read/write behavior through simulation  
+✔ Strengthened CPU datapath understanding  
+✔ Achieved placement & GATE aligned RTL  
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🎯 INTERVIEW ONE-LINER
+━━━━━━━━━━━━━━━━━━━━━━━
+“A register file provides multiple combinational read ports and a synchronous write port to support parallel operand access in CPU datapaths.”
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🔒 DAY-29 COMPLETE
+━━━━━━━━━━━━━━━━━━━━━━━
+
+
 
 
 
