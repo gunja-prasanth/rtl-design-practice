@@ -1709,6 +1709,99 @@ Waveforms validate proper register file operation.
 ━━━━━━━━━━━━━━━━━━━━━━━
 
 
+🟩 Day-30: UART Transmitter (TX Only)
+🏁 FINAL DAY — 30-DAY RTL CORE BLOCK CHALLENGE
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🎯 OBJECTIVE
+━━━━━━━━━━━━━━━━━━━━━━━
+Design and verify a **UART Transmitter (TX-only)** using Verilog HDL.
+
+This design implements a **real-world serial communication peripheral**, completing the 30-day RTL core blocks journey with an **industry-relevant module**.
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🔥 WHY THIS IS A STRONG FINISH
+━━━━━━━━━━━━━━━━━━━━━━━
+✔ UART is used in SoCs, MCUs, FPGAs, debug ports  
+✔ Tests FSM design, timing, counters, and control logic  
+✔ Bridges theory → real hardware behavior  
+✔ Frequently discussed in interviews and labs  
+
+Ending with UART proves **practical RTL maturity**, not just academic knowledge.
+
+━━━━━━━━━━━━━━━━━━━━━━━
+✨ FEATURES IMPLEMENTED
+━━━━━━━━━━━━━━━━━━━━━━━
+✅ UART Transmitter (TX only)  
+✅ FSM-based control logic  
+✅ Baud-rate tick generation  
+✅ Start bit, 8 data bits, stop bit  
+✅ LSB-first transmission  
+✅ Busy status signal  
+✅ Parameterized clock & baud rate  
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🧱 RTL DESIGN
+━━━━━━━━━━━━━━━━━━━━━━━
+📄 File: `uart_tx.v`  
+🛠 Language: Verilog HDL  
+🧩 Design Type: Sequential FSM + Timing Control  
+
+🔹 FSM States:
+- **IDLE**  → Waits for transmit request  
+- **START** → Sends start bit (`0`)  
+- **DATA**  → Sends 8 data bits (LSB first)  
+- **STOP**  → Sends stop bit (`1`)  
+
+🔹 Timing:
+- Baud rate generated using a **counter**
+- Each bit is held for one baud period
+- UART idle line remains HIGH
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🧪 TESTBENCH
+━━━━━━━━━━━━━━━━━━━━━━━
+📄 File: `tb_uart_tx.v`
+
+✔ Drives `tx_start` with sample data  
+✔ Observes correct serial bit sequence  
+✔ Verifies busy flag behavior  
+✔ Confirms start → data → stop timing  
+
+Waveforms clearly show **UART frame structure**.
+
+━━━━━━━━━━━━━━━━━━━━━━━
+📂 FOLDER STRUCTURE
+━━━━━━━━━━━━━━━━━━━━━━━
+rtl_core_blocks/
+└── 30_uart_tx/
+    ├── uart_tx.v
+    └── README.md
+
+testbenches/
+└── 30_uart_tx/
+    └── tb_uart_tx.v
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🏆 30-DAY CHALLENGE — FINAL OUTCOME
+━━━━━━━━━━━━━━━━━━━━━━━
+✔ Completed **30 RTL core blocks**  
+✔ Covered combinational, sequential, FSM-based designs  
+✔ Built CPU datapath components (ALU, FIFO, RF, Arbiter)  
+✔ Implemented real peripherals (UART)  
+✔ Maintained clean, professional GitHub structure  
+✔ Followed strict build → copy → commit discipline  
+
+This repository now represents **placement-ready RTL work**.
+
+“I implemented a UART transmitter using an FSM with baud-rate timing, start/data/stop framing, and busy control — similar to real SoC peripherals.”
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🔒 DAY-30 COMPLETE
+🎉 30-DAY RTL CORE BLOCKS CHALLENGE COMPLETE
+━━━━━━━━━━━━━━━━━━━━━━━
+
+----
 
 
 
