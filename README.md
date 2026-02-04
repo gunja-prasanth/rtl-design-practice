@@ -69,8 +69,8 @@ The work is organized day-wise to show structured learning and progressive compl
 ## 🧠 Concept Notes
 
 - **NAND and NOR** are called *universal gates* because any logic function can be built using them.
-- **XOR** outputs `1` when inputs are different.
-- **XNOR** outputs `1` when inputs are the same.
+- **XOR** outputs `1` when the inputs are different.
+- **XNOR** outputs `1` when the inputs are the same.
 
 ---
 
