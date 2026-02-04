@@ -130,7 +130,7 @@ The work is organized day-wise to show structured learning and progressive compl
 ## 🔹 Day-4: Subtractors (Combinational Circuits)
 
 This section covers the design and verification of subtractor circuits using Verilog HDL.  
-Subtractors are fundamental arithmetic blocks used in ALUs and processors.
+Subtractors are the fundamental arithmetic blocks used in ALUs and processors.
 
 ### 📁 RTL Modules
 Location: `combinational/subtractors/`
